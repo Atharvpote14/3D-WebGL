@@ -1,0 +1,279 @@
+/* Typography System - NOIR ATELIER */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Typography Variables */
+:root {
+    /* Font Families */
+    --font-condensed: 'Bebas Neue', cursive;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Colors */
+    --color-primary-black: #0b0b0b;
+    --color-secondary-black: #111;
+    --color-white: #ffffff;
+    
+    /* Typography Scale - Desktop */
+    --font-size-h1-desktop: clamp(96px, 8vw, 140px);
+    --font-size-h2-desktop: clamp(64px, 5vw, 88px);
+    --font-size-h3-desktop: clamp(40px, 3vw, 56px);
+    --font-size-body-desktop: 18px;
+    
+    /* Typography Scale - Mobile */
+    --font-size-h1-mobile: clamp(48px, 6vw, 64px);
+    --font-size-h2-mobile: clamp(36px, 4.5vw, 48px);
+    --font-size-h3-mobile: clamp(24px, 3vw, 32px);
+    --font-size-body-mobile: 16px;
+    
+    /* Line Heights */
+    --line-height-tight: 1;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+    
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.1em;
+    
+    /* Max Width for Readability */
+    --max-width-body: 65ch;
+}
+
+/* Base Typography */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-desktop);
+    line-height: var(--line-height-normal);
+    color: var(--color-primary-black);
+    background-color: var(--color-white);
+    font-weight: 400;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-condensed);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+    text-transform: uppercase;
+    color: var(--color-primary-black);
+}
+
+/* H1 - Hero Headlines */
+h1 {
+    font-size: var(--font-size-h1-desktop);
+}
+
+/* H2 - Section Headlines */
+h2 {
+    font-size: var(--font-size-h2-desktop);
+}
+
+/* H3 - Feature Titles */
+h3 {
+    font-size: var(--font-size-h3-desktop);
+}
+
+/* Body Text */
+p {
+    font-size: var(--font-size-body-desktop);
+    line-height: var(--line-height-relaxed);
+    max-width: var(--max-width-body);
+    color: var(--color-primary-black);
+}
+
+/* Links */
+a {
+    font-family: var(--font-body);
+    font-size: inherit;
+    color: var(--color-primary-black);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-primary-black);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Specific Typography Components */
+
+/* Hero Headline */
+.hero-headline {
+    font-size: var(--font-size-h1-desktop);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-headline .line {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-subtext {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-desktop);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--color-primary-black);
+    opacity: 0.8;
+}
+
+/* Statement Headline */
+.statement-headline {
+    font-size: var(--font-size-h1-desktop);
+    text-align: center;
+    line-height: 1.1;
+}
+
+.statement-headline .line {
+    display: block;
+    overflow: hidden;
+}
+
+/* Featured Story Title */
+.featured-story-title {
+    font-size: var(--font-size-h2-desktop);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.featured-story-description {
+    font-size: var(--font-size-body-desktop);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 2rem;
+    max-width: 50ch;
+}
+
+/* Manifesto */
+.manifesto-title {
+    font-size: var(--font-size-h2-desktop);
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.manifesto-paragraph {
+    font-size: var(--font-size-h3-desktop);
+    font-family: var(--font-condensed);
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-tight);
+    max-width: 45ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Links */
+.contact-link {
+    font-family: var(--font-condensed);
+    font-size: var(--font-size-h3-desktop);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-tight);
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+/* Read More Button */
+.read-more {
+    font-family: var(--font-condensed);
+    font-size: var(--font-size-body-desktop);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.read-more::after {
+    height: 2px;
+    bottom: 0;
+}
+
+/* Loading Text */
+.loading-text {
+    font-family: var(--font-condensed);
+    font-size: var(--font-size-h2-desktop);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--color-white);
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: var(--font-size-body-mobile);
+    }
+    
+    h1 {
+        font-size: var(--font-size-h1-mobile);
+    }
+    
+    h2 {
+        font-size: var(--font-size-h2-mobile);
+    }
+    
+    h3 {
+        font-size: var(--font-size-h3-mobile);
+    }
+    
+    p {
+        font-size: var(--font-size-body-mobile);
+    }
+    
+    .hero-headline {
+        font-size: var(--font-size-h1-mobile);
+    }
+    
+    .hero-subtext {
+        font-size: var(--font-size-body-mobile);
+    }
+    
+    .statement-headline {
+        font-size: var(--font-size-h1-mobile);
+    }
+    
+    .featured-story-title {
+        font-size: var(--font-size-h2-mobile);
+    }
+    
+    .featured-story-description {
+        font-size: var(--font-size-body-mobile);
+    }
+    
+    .manifesto-title {
+        font-size: var(--font-size-h2-mobile);
+    }
+    
+    .manifesto-paragraph {
+        font-size: var(--font-size-h3-mobile);
+    }
+    
+    .contact-link {
+        font-size: var(--font-size-h3-mobile);
+    }
+    
+    .read-more {
+        font-size: var(--font-size-body-mobile);
+    }
+    
+    .loading-text {
+        font-size: var(--font-size-h2-mobile);
+    }
+}

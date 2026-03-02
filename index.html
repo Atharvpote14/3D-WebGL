@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOIR ATELIER</title>
+    <meta name="description" content="Bold. Minimal. Modern. Editorial.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="css/typography.css" as="style">
+    <link rel="preload" href="css/layout.css" as="style">
+    <link rel="preload" href="css/animations.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- External libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">NOIR ATELIER</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <div class="hero-image" data-speed="0.5"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-headline">
+                    <span class="line">THE NEW ERA</span>
+                    <span class="line">OF SILENCE</span>
+                </h1>
+                <p class="hero-subtext">Bold. Minimal. Modern. Editorial.</p>
+            </div>
+        </section>
+
+        <!-- Statement Section -->
+        <section class="statement" id="statement">
+            <div class="statement-container">
+                <h2 class="statement-headline">
+                    <span class="line">WE BELIEVE IN</span>
+                    <span class="line">THE POWER OF</span>
+                    <span class="line">RESTRAINT</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- Featured Story Section -->
+        <section class="featured-story" id="featuredStory">
+            <div class="featured-story-container">
+                <div class="featured-story-grid">
+                    <div class="featured-story-image">
+                        <div class="image-wrapper" data-speed="0.8">
+                            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Editorial Fashion" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="featured-story-content">
+                        <h3 class="featured-story-title">THE ART OF PRESENCE</h3>
+                        <p class="featured-story-description">
+                            In a world saturated with noise, we find beauty in simplicity. 
+                            Each piece tells a story through form, texture, and the spaces between.
+                        </p>
+                        <a href="#" class="read-more">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal Editorial Strip -->
+        <section class="horizontal-strip" id="horizontalStrip">
+            <div class="horizontal-strip-container">
+                <div class="horizontal-strip-track">
+                    <div class="strip-item">
+                        <div class="strip-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="Editorial 1" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80" alt="Editorial 2" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-image-wrapper">
+                            <img src="https://i.pinimg.com/736x/cf/5e/a1/cf5ea196d4e2914e7bca1d0d89dc86b5.jpg" alt="Editorial 3" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80" alt="Editorial 4" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&q=80" alt="Editorial 5" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section class="manifesto" id="manifesto">
+            <div class="manifesto-container">
+                <div class="manifesto-content">
+                    <h2 class="manifesto-title">MANIFESTO</h2>
+                    <div class="manifesto-text">
+                        <p class="manifesto-paragraph">
+                            We create spaces where silence speaks louder than words.
+                        </p>
+                        <p class="manifesto-paragraph">
+                            Where each element is placed with intention, not impulse.
+                        </p>
+                        <p class="manifesto-paragraph">
+                            Where typography carries emotion and whitespace creates tension.
+                        </p>
+                        <p class="manifesto-paragraph">
+                            This is not fashion. This is presence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <a href="mailto:contact@noiratelier.com" class="contact-link">contact@noiratelier.com</a>
+                    <a href="https://instagram.com/noiratelier" class="contact-link" target="_blank">INSTAGRAM</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
